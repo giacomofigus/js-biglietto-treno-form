@@ -7,3 +7,7 @@
     Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
  */
 
+
+
+const nomeUtente = document.getElementById("fName").value
+console.log(nomeUtente);
