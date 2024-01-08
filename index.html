@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <form name="my-form">
+        <form id="form" onSubmit="return validateForm();">
             <label class="d-block" for="fName">Inserisci il tuo nome:</label>
             <input type="text" id="fName" name="fName">
 
@@ -18,7 +18,8 @@
             <label class="d-block" for="uAge">Inserisci la tua età:</label>
             <input type="text" id="uAge" name="uAge">
 
-            <input class="d-block my-3" type="submit" value="Invia" ">
+            <input class="d-block my-3" type="submit" value="Invia">
+
         </form>
     </main>
     
