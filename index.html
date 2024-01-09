@@ -3,26 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css' integrity='sha512-r0fo0kMK8myZfuKWk9b6yY8azUnHCPhgNz/uWDl2rtMdWJlk7gmd9socvGZdZzICwAkMgfTkVrplDahQ07Gi0A==' crossorigin='anonymous'/>
+    <title>Biglietto del treno form </title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <form id="form" onSubmit="return validateForm();">
-            <label class="d-block" for="fName">Inserisci il tuo nome:</label>
-            <input type="text" id="fName" name="fName">
+    <main class="container text-center ">
+        <h1 class="text-light">
+            Biglietto del treno
+        </h1>
 
-            <label class="d-block" for="uKm">Inserisci i km da percorrere:</label>
-            <input type="text" id="uKm" name="uKm">
+        <div class="bg-light rounded p-3">
+            <div class="row">
+                <div class="col-4">
+                    <label for="nameSurname" class="form-label">Nome Cognome</label>
+                    <input type="text" class="form-control" id="nameSurname" name="nomeCognome">
+                </div>
+                <div class="col-4">
+                    <label for="km" class="form-label">Km da percorrere</label>
+                    <input type="number" class="form-control" id="km" name="kilometri">
+                </div>
+                <div class="col-4">
+                    <label for="eta" class="form-label">Fascia d'età</label>
+                    <select name="fasciaeta" class="form-select">
+                        <option selected>Open this select menu</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over 65">over 65</option>
+                    </select>
+                </div>
+            </div>
+            <button class="mt-3 btn btn-primary" id="btnRisultato">Genera biglietto</button>
+        </div>
 
-            <label class="d-block" for="uAge">Inserisci la tua età:</label>
-            <input type="text" id="uAge" name="uAge">
+        <h2 id="titoloBiglietto" class="text-light my-3 d-none">Il tuo biglietto</h2>
 
-            <input class="d-block my-3" type="submit" value="Invia">
+        <div id="biglietto" class="bg-light rounded p-3 d-none">
+            <h4 class="text-start">Dettagli cliente</h4>
+            <div class="border ">
+                <div class="row">
+                    <div class="col-2 bg-secondary p-2">
+                        <h5 class="text-start">Nome Passeggerp</h5>
+                        <span id="risultatoNomeCognome">Nome Cognome</span>
+                    </div>
+                    <div class="col-10">
+                        <span></span>
+                        <div class="row p-2">
+                            <div class="col-3">
+                                <h6>Offerta</h6>
+                                <span id="risultatoOfferta">Biglietto standard</span>
+                            </div>
+                            <div class="col-3">
+                                <h6>Carrozza</h6>
+                                <span id="numeroCarrozza">5</span>
+                            </div>
+                            <div class="col-3">
+                                <h6>Codice Cp</h6>
+                                <span id="numeroCodiceCp">4566</span>
+                            </div>
+                            <div class="col-3">
+                                <h6>Costo Biglietto</h6>
+                                <span id="prezzoRisultato">2€</span>
+                            </div>
 
-        </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </main>
+
+
     
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js' integrity='sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==' crossorigin='anonymous'></script>
     <script src="./main.js"></script>
 </body>
 </html>
